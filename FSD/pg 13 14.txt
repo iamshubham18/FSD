@@ -1,0 +1,20 @@
+  PG 13
+
+let message: string = 'hello world';
+console.log(message);
+
+to compile type: tsc <filename>.ts
+to run type : node.js
+
+   PG 14
+
+node --version
+npm --version
+
+to create reat application
+cd Desktop
+npm create react-app <appname>
+
+to run react application
+cd <appname>
+npm start

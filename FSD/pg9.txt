@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Form!</h1>
+        <form>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email">
+            </p>
+            <p>
+                <label for="password">Password: </label>
+                <input type="password">
+            </p>
+            <p>
+                <input type="submit" id="submit" value="login">
+            </p>
+        </form>
+        <script>
+            document.getElementById('submit').addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('form').style.display = 'none';
+                document.querySelector('h1').innerText = "Success";
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+#write this script in editor
+
+FROM nginx:latest
+EXPOSE 80
+CMD ["echo", "shubham"]
+
+
+
+docker build -t ppp .
+docker run -p 8080:80 nginx

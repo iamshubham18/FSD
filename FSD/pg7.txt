@@ -1,0 +1,27 @@
+var name = "Shubham"
+console.log('My name is ${name}');
+
+#pipeline script
+
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[credentialsId: '3151946f-90a0-476a-b789-c8a8a9eae8e3', url: 'https://github.com/halfboil-1/321.git']]])
+            }
+        }
+        stage('build') {
+            steps {
+                git branch: 'main', credentialsId: '3151946f-90a0-476a-b789-c8a8a9eae8e3', url: 'https://github.com/halfboil-1/321.git'
+                bat label: '', script: "node hello.js"
+            }
+        }
+        stage('test') {
+            steps {
+                echo("test successful")
+            }
+        }
+    }
+}

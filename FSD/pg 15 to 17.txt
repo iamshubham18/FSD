@@ -1,0 +1,74 @@
+pg 15
+
+import React, { useState } from "react";
+
+function App() {
+  const [name, setName] = useState("Vikas");
+
+  return (
+    <div>
+      <h2>My Name is {name}</h2>
+      Click here to{" "}
+      <button onClick={() => setName("Xander")}>Update Name</button>
+    </div>
+  );
+}
+export default App;
+
+pg 16
+
+import React from 'react';
+ function Student (props){
+  return (
+    <div>
+      <h1>
+        name:{props.name}
+      </h1>
+      <p>
+        marks:{props.marks}
+      </p>
+    </div>
+  )
+ }
+ function App(){
+    return (
+      <div>
+        <Student name={"abhi"} marks={90}/>
+      </div>
+    )
+ }
+ export default App;
+
+pg 17
+
+import React from 'react';
+
+function Student(props) {
+  return (
+    <React.Fragment>
+      <h2>Student Info</h2>
+      <h4>Name: {props.stName} | Age: {props.stAge}</h4>
+    </React.Fragment>
+  );
+}
+
+function App() {
+  const students = [
+    { id: 1, name: "Vikas Singh", age: 24 },
+    { id: 2, name: "Anchal Rai", age: 23 }
+  ];
+
+  return (
+    <div>
+      <h1>Student List</h1>
+      {students.map((student) => (
+        <Student key={student.id} stName={student.name} stAge={student.age} />
+      ))}
+    </div>
+  );
+}
+
+export default App;
+
+let message: string='helloworld';
+console.log(message);

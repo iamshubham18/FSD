@@ -1,0 +1,15 @@
+open cmd and execute
+mongod
+mongosh
+
+1)create databse: use student
+2)create collection: db.createCollection('studentInfo')
+3)show collection: show collections
+4)show database: show dbs
+5)insert single document: db.info.insertOne({id:1,name:"shubham"})
+6)insert manydocuments:  db.info.insertMany([{id:2,name:"suraj"},{id:3,name:"sam"}])
+7)show documnets in a collection: db.info.find()
+8)show documnets in a collection using filter: db.info.find({id:1})
+9)update one document: db.info.updateOne({ name: "sam" }, { $set: { id:404 } } )
+10)delete one document: db.info.deleteOne({ id:404 } )
+11)delete multiple document: db.info.deleteMany({ } ) 

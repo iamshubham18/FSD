@@ -1,0 +1,15 @@
+git config --global user.name <username>
+git config --global user.email <email>
+
+git init #initialize
+git status #status
+git add <filename> #add files
+git commit -m "message" #commit changes
+git branch #create new branch and view
+git log # commit history
+git checkout #switch branches
+git switch -c <new branch name> # to create new branch and switch to it
+git merge #merge branch
+git remote add < github repositry link> #to connect to git hub
+git push origin main #to push the changes to git hub
+git pull origin main #to pull the changes to git hub
